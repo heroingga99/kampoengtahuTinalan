@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="skin/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+      .wave-divider {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+      }
+
+      .wave-divider svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 60px;
+      }
+
+      @media (min-width: 768px) {
+        .wave-divider svg {
+          height: 150px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="bg-white shadow-lg sticky top-0 z-40">
+      <div class="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-20">
+          <div class="flex-shrink-0 flex items-center">
+            <a href="#"
+              ><img
+                src="images/Logo/Logo.svg"
+                alt="logo"
+                class="size-16 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300" /></a
+            ><a
+              href="#"
+              class="text-xl font-bold text-gray-800 font-sans ml-4 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300 uppercase"
+              >Kampoeng Tahu Tinalan</a
+            >
+          </div>
+          <div
+            class="hidden md:flex space-x-4 items-center font-mono font-bold"
+          >
+            <a
+              href="#"
+              class="text-black transition ease-in delay-50 hover:-translate-y-1 hover:underline hover:decoration-sky-700 hover:scale-110 duration-300"
+              >Beranda</a
+            >
+            <a
+              href="#section3"
+              class="text-black transition ease-in delay-50 hover:-translate-y-1 hover:underline hover:decoration-sky-700 hover:scale-110 duration-300"
+              >Berita</a
+            >
+            <a
+              href="#"
+              class="text-black transition ease-in delay-50 hover:-translate-y-1 hover:underline hover:decoration-sky-700 hover:scale-110 duration-300"
+              >Produk</a
+            >
+            <a
+              href="#" target="_blank"
+              class="text-black transition ease-in delay-50 hover:-translate-y-1 hover:underline hover:decoration-sky-700 hover:scale-110 duration-300"
+              >Tentang saya</a
+            >
+            <button
+              type="button"
+              class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300"
+            >
+              Login
+            </button>
+            <button
+              type="button"
+              class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300"
+            >
+              Register
+            </button>
+          </div>
+          <div class="md:hidden flex items-center">
+            <button
+              id="menu-btn"
+              class="text-gray-700 hover:text-gray-900 focus:outline-none"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- BATAS NAVBAR -->
+
+    <!-- OFFCANVAS -->
+    <div
+      id="menu"
+      class="fixed inset-0 bg-gray-400 bg-opacity-75 transform -translate-x-full transition-transform duration-300 ease-in-out z-50 backdrop-blur-sm"
+    >
+      <div class="bg-white w-64 h-full relative">
+        <div class="flex justify-end p-4">
+          <button
+            id="close-btn"
+            class="text-gray-700 hover:text-gray-900 focus:outline-none"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div class="flex flex-col space-y-4 p-4">
+          <a href="#"
+            ><img
+              src="images/Logo/Logo.svg"
+              alt="logo"
+              class="size-16 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300" /></a
+          ><a
+            href="#"
+            class="text-xl font-bold text-gray-800 font-sans ml-4 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300"
+            >UMKM TES AREA</a
+          >
+          <a
+            href="#"
+            class="text-black transition ease-in delay-50 hover:-translate-y-1 hover:underline hover:decoration-sky-700 hover:scale-110 duration-300"
+            >Beranda</a
+          >
+          <a
+            href="#section3"
+            class="text-black transition ease-in delay-50 hover:-translate-y-1 hover:underline hover:decoration-sky-700 hover:scale-110 duration-300"
+            >Berita</a
+          >
+          <a
+            href="#"
+            class="text-black transition ease-in delay-50 hover:-translate-y-1 hover:underline hover:decoration-sky-700 hover:scale-110 duration-300"
+            >Produk</a
+          >
+          <a
+            href="#"
+            class="text-black transition ease-in delay-50 hover:-translate-y-1 hover:underline hover:decoration-sky-700 hover:scale-110 duration-300"
+            >Tentang Saya</a
+          >
+          <!-- <a href="#" class="text-gray-700 hover:text-gray-900">Home</a>
+            <a href="#" class="text-gray-700 hover:text-gray-900">About</a>
+            <a href="#" class="text-gray-700 hover:text-gray-900">Services</a>
+            <a href="#" class="text-gray-700 hover:text-gray-900">Contact</a> -->
+          <button
+            type="button"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300"
+          >
+            Login
+          </button>
+          <button
+            type="button"
+            class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300"
+          >
+            Register
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- BATAS OFFCANVAS -->
+
+    <!-- CONTENT -->
+    <section
+      class="relative bg-cover bg-center h-64"
+      style="
+        background-image: url('https://beritajatim.com/cdn-cgi/image/width=684,height=467,fit=crop,quality=80,format=auto,onerror=redirect,metadata=none/wp-content/uploads/2021/09/3-2.jpg');
+      "
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% opacity-75"
+      ></div>
+      <div
+        class="relative flex flex-col items-start ml-16 justify-center h-full"
+      >
+        <h1 class="text-white text-5xl font-bold shadow-md my-2">
+          KAMPOENG TAHU
+        </h1>
+        <p class="text-white uppercase text-xl">Desa Tinalan Kota Kediri</p>
+      </div>
+    </section>
+
+    <section class="bg-emerald-100 dark:bg-emerald-900 py-20 sm:py-20">
+      <section
+        class="container mx-auto text-center relative  h-40"
+      >
+        <div>
+          <button
+            id="scrollButton2"
+            class="px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300 uppercase me-2 mb-2"
+          >
+            Profile Kampoeng Tahu
+          </button>
+          <button
+            id="scrollButton3"
+            class="px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300 uppercase me-2 mb-2"
+          >
+            Berita Kampoeng Tahu
+          </button>
+          <button
+            id="scrollButton"
+            class="px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300 uppercase me-2 mb-2"
+          >
+            Gallery Kampoeng Tahu
+          </button>
+        </div>
+      </section>
+      <section id="section1">
+        <!-- Container -->
+        <div class="container mx-auto px-4">
+          <div
+            class="relative flex flex-col items-center mx-auto lg:flex-row-reverse lg:max-w-5xl lg:mt-12 xl:max-w-6xl z-10"
+            data-aos="fade-down"
+            data-aos-duration="600"
+            data-aos-anchor-placement="center-bottom"
+          >
+            <!-- Image Column -->
+            <div class="w-full h-64 lg:w-1/2 lg:h-auto">
+              <img
+                class="h-full w-full object-cover rounded-md shadow-xl sm:rounded-xl"
+                src="https://prodamas.kedirikota.go.id/articleProd/sampul/sampul-1655979581.jpg"
+                alt="Winding mountain road"
+              />
+              <!-- <img class="h-full w-full object-cover rounded-md shadow-xl sm:rounded-xl mt-3" src="https://static.republika.co.id/uploads/images/inpicture_slide/perajin-menyelesaikan-pembuatan-tahu-takwa-khas-kediri-berbahan-baku_210529153116-790.jpg"
+                        alt="Winding mountain road"> -->
+            </div>
+            <!-- Close Image Column -->
+
+            <!-- Text Column -->
+            <div
+              class="max-w-lg bg-white md:max-w-2xl md:z-10 md:shadow-lg md:absolute md:top-0 md:mt-48 lg:w-3/5 lg:left-0 lg:mt-20 lg:ml-20 xl:mt-24 xl:ml-12 rounded-md shadow-xl sm:rounded-xl"
+            >
+              <!-- Text Wrapper -->
+              <div class="flex flex-col p-12 md:px-16">
+                <h2
+                  class="text-2xl font-medium uppercase text-green-800 lg:text-4xl"
+                >
+                  Kampung Tahu Tinalan di Kota Kediri, Jawa Timur
+                </h2>
+                <p class="mt-4">
+                  merupakan sebuah kawasan yang dikenal sebagai sentra produksi
+                  tahu tradisional. Terletak di Kelurahan Tinalan, Kecamatan
+                  Pesantren, kampung ini sudah lama dikenal sebagai pusat
+                  industri rumahan pembuatan tahu. Aktivitas pembuatan tahu di
+                  sini dimulai sejak puluhan tahun yang lalu dan telah menjadi
+                  bagian penting dari kehidupan masyarakat setempat.
+                </p>
+                <!-- Button Container -->
+                <div class="mt-8">
+                  <a
+                    href="descKampoengTahu.html"
+                    target="_blank"
+                    class="inline-block w-full text-center text-lg font-medium text-gray-100 bg-green-600 border-solid border-2 border-gray-600 py-4 px-10 hover:bg-green-800 hover:shadow-md md:w-48"
+                    >Selengkapnya
+                  </a>
+                </div>
+              </div>
+              <!-- Close Text Wrapper -->
+            </div>
+            <!-- Close Text Column -->
+          </div>
+        </section>
+      </div>
+    </section>
+    <div class="wave-divider dark:bg-gray-800">
+      <svg
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+          class="fill-emerald-100 dark:fill-emerald-900"
+        ></path>
+      </svg>
+    </div>
+
+    <!-- BERITA - BERITA -->
+    <section id="section3">
+      <div class="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16 relative mt-8">
+        <h1 class="text-4xl font-bold text-center mb-8 mt-8">Berita Terkait</h1>
+
+        <div class="grid grid-cols-1 sm:grid-cols-12 gap-5">
+          <div class="sm:col-span-5">
+            <a href="#">
+              <div
+                class="w-full h-64 sm:h-auto bg-cover bg-center text-center overflow-hidden"
+                style="
+                  background-image: url('https://prodamas.kedirikota.go.id/articleProd/sampul/sampul-1655979581.jpg');
+                "
+                title="Woman holding a mug"
+              ></div>
+            </a>
+            <div
+              class="mt-3 bg-white rounded-b lg:rounded-b-none lg:rounded-r flex flex-col justify-between leading-normal"
+            >
+              <div class="">
+                <a
+                  href="https://regional.kompas.com/read/2021/08/10/131248678/menilik-potensi-kampung-tahu-sebagai-klaster-industri-produk-halal-di?page=all#page2"
+                  class="text-xs text-indigo-600 uppercase font-medium hover:text-gray-900 transition duration-500 ease-in-out"
+                >
+                  KOMPAS
+                </a>
+                <a
+                  href="berita.html"
+                  class="block text-gray-900 font-bold text-2xl mb-2 hover:text-indigo-600 transition duration-500 ease-in-out"
+                >
+                  Menilik Potensi Kampung Tahu sebagai Klaster Industri Produk
+                  Halal di Kediri
+                </a>
+                <p class="text-gray-700 text-base mt-2">
+                  Di wilayah Kelurahan Tinalan, Kecamatan Pesantren, terdapat
+                  kawasan sentra industri tahu kuning. Kawasan itu juga disebut
+                  Kampung Tahu.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="sm:col-span-7 grid grid-cols-2 lg:grid-cols-3 gap-5">
+            <div class="">
+              <a href="#">
+                <div
+                  class="w-full h-40 sm:h-64 bg-cover bg-center text-center overflow-hidden"
+                  style="
+                    background-image: url('images/album/kampoengTahuJatimNow.jpg');
+                  "
+                  title="Woman holding a mug"
+                ></div>
+              </a>
+              <a
+                href="https://jatimnow.com/baca-69587-intip-kreasi-perajin-di-kampung-tahu-kini-oleholeh-kediri-banyak-pilihan"
+                class="text-xs text-indigo-600 uppercase font-medium hover:text-gray-900 transition duration-500 ease-in-out"
+              >
+                JATIMNOW
+              </a>
+              <a
+                href="berita2.html"
+                class="text-gray-900 inline-block font-semibold text-md hover:text-indigo-600 transition duration-500 ease-in-out"
+              >
+                Intip Kreasi Perajin di Kampung Tahu, Kini Oleh-oleh Kediri
+                Banyak Pilihan
+              </a>
+            </div>
+            <!-- <div class="">
+            <a href="#">
+              <div
+                class="w-full h-40 sm:h-64 bg-cover bg-center text-center overflow-hidden"
+                style="
+                  background-image: url('https://api.time.com/wp-content/uploads/2020/06/GettyImages-1222922545.jpg?quality=85&amp;w=364&amp;h=204&amp;crop=1');
+                "
+                title="Woman holding a mug"
+              ></div>
+            </a>
+            <a
+              href="#"
+              class="text-gray-900 inline-block font-semibold text-md my-2 hover:text-indigo-600 transition duration-500 ease-in-out"
+            >
+              How Trump's Mistakes Became Biden's Big Breaks
+            </a>
+          </div>
+          <div class="">
+            <a href="#">
+              <div
+                class="w-full h-40 sm:h-64 bg-cover bg-center text-center overflow-hidden"
+                style="
+                  background-image: url('https://api.time.com/wp-content/uploads/2020/07/American-Flag.jpg?quality=85&amp;w=364&amp;h=204&amp;crop=1');
+                "
+                title="Woman holding a mug"
+              ></div>
+            </a>
+            <a
+              href="#"
+              class="text-gray-900 inline-block font-semibold text-md my-2 hover:text-indigo-600 transition duration-500 ease-in-out"
+            >
+              Survey: Many Americans 'Dissatisfied' With U.S.
+            </a>
+          </div>
+          <div class="">
+            <a href="#">
+              <div
+                class="w-full h-40 sm:h-64 bg-cover bg-center text-center overflow-hidden"
+                style="
+                  background-image: url('https://api.time.com/wp-content/uploads/2020/06/GettyImages-1222922545.jpg?quality=85&amp;w=364&amp;h=204&amp;crop=1');
+                "
+                title="Woman holding a mug"
+              ></div>
+            </a>
+            <a
+              href="#"
+              class="text-gray-900 inline-block font-semibold text-md my-2 hover:text-indigo-600 transition duration-500 ease-in-out"
+            >
+              How Trump's Mistakes Became Biden's Big Breaks
+            </a>
+          </div>
+          <div class="">
+            <a href="#">
+              <div
+                class="w-full h-40 sm:h-64 bg-cover bg-center text-center overflow-hidden"
+                style="
+                  background-image: url('https://api.time.com/wp-content/uploads/2020/07/American-Flag.jpg?quality=85&amp;w=364&amp;h=204&amp;crop=1');
+                "
+                title="Woman holding a mug"
+              ></div>
+            </a>
+            <a
+              href="#"
+              class="text-gray-900 inline-block font-semibold text-md my-2 hover:text-indigo-600 transition duration-500 ease-in-out"
+            >
+              Survey: Many Americans 'Dissatisfied' With U.S.
+            </a>
+          </div>
+          <div class="">
+            <a href="#">
+              <div
+                class="w-full h-40 sm:h-64 bg-cover bg-center text-center overflow-hidden"
+                style="
+                  background-image: url('https://api.time.com/wp-content/uploads/2020/07/president-trump-coronavirus-election.jpg?quality=85&amp;w=364&amp;h=204&amp;crop=1');
+                "
+                title="Woman holding a mug"
+              ></div>
+            </a>
+            <a
+              href="#"
+              class="text-gray-900 inline-block font-semibold text-md my-2 hover:text-indigo-600 transition duration-500 ease-in-out"
+            >
+              Trump Steps Back Into Coronavirus Spotlight
+            </a>
+          </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Batas BERITA - BERITA -->
+
+    <!-- Galery -->
+    <section id="section2" class="bg-white dark:bg-gray-800 py-12 sm:py-20">
+      <div class="container mx-auto px-4">
+        <div class="container mx-auto px-4 py-8">
+          <h1 class="text-4xl font-bold text-center mb-8">
+            Galeri Kampoeng Tahu
+          </h1>
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <!-- Large item -->
+            <div
+              class="md:col-span-2 md:row-span-2 relative overflow-hidden rounded-2xl shadow-lg group"
+            >
+              <img
+                src="https://prodamas.kedirikota.go.id/articleProd/sampul/sampul-1655979581.jpg"
+                alt="Nature"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <div class="absolute bottom-0 left-0 right-0 p-4">
+                  <h3 class="text-2xl font-bold text-white">Kampoeng Tahu</h3>
+                  <p class="text-white">Desa Tinalan Kota Kediri</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Two small items -->
+            <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+              <img
+                src="https://media.suara.com/pictures/653x366/2019/08/23/41082-kampung-tahu.jpg"
+                alt="Food"
+                class="w-full h-52 object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <div class="absolute bottom-0 left-0 right-0 p-4">
+                  <h4 class="text-xl font-bold text-white">
+                    Walikota Kediri 1
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <div
+              class="relative overflow-hidden rounded-2xl shadow-lg group sm:h-auto bg-cover"
+            >
+              <img
+                src="https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/radarkediri/2019/08/wajah-tinalan-setelah-menjadi-wisata-edukasi-kampung-tahu_m_152592.jpg"
+                alt="Technology"
+                class="w-full h-52 object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <div class="absolute bottom-0 left-0 right-0 p-4">
+                  <h4 class="text-xl font-bold text-white">
+                    Walikota Kediri 2
+                  </h4>
+                </div>
+              </div>
+            </div>
+
+            <!-- Three medium items -->
+            <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+              <img
+                src="https://asset.kompas.com/crops/UM8c2xqg2Os_EFnMjJPFPrS7EyY=/0x0:0x0/750x500/data/photo/2021/08/05/610bc2888ac9c.jpg"
+                alt="Travel"
+                class="w-full h-48 object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <div class="absolute bottom-0 left-0 right-0 p-4">
+                  <h4 class="text-xl font-bold text-white">
+                    Kegiatan di Kampoeng Tahu 1
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+              <img
+                src="https://beritajatim.com/cdn-cgi/image/width=684,height=467,fit=crop,quality=80,format=auto,onerror=redirect,metadata=none/wp-content/uploads/2021/09/3-2.jpg"
+                alt="Art"
+                class="w-full h-48 object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <div class="absolute bottom-0 left-0 right-0 p-4">
+                  <h4 class="text-xl font-bold text-white">
+                    Produksi Tahu di Kampoeng Tahu 2
+                  </h4>
+                </div>
+              </div>
+            </div>
+
+            <!-- bottom cards -->
+            <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+              <img
+                src="https://metaranews.co/wp-content/uploads/2023/04/WhatsApp-Image-2023-04-24-at-18.03.43.jpeg"
+                alt="Sport"
+                class="w-full h-48 object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <div class="absolute bottom-0 left-0 right-0 p-4">
+                  <h4 class="text-xl font-bold text-white">
+                    Kegiatan di Kampoeng Tahu 3
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+              <img
+                src="images/album/kampoengTahuJatimNow2.jpg"
+                alt="Sport"
+                class="w-full h-48 object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <div class="absolute bottom-0 left-0 right-0 p-4">
+                  <h4 class="text-xl font-bold text-white">
+                    Kegiatan di Kampoeng Tahu 4
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+              <img
+                src="https://lenteratoday.com/wp-content/uploads/2021/09/tahu-1068x712.jpg?x62209"
+                alt="Sport"
+                class="w-full h-48 object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <div class="absolute bottom-0 left-0 right-0 p-4">
+                  <h4 class="text-xl font-bold text-white">
+                    Kegiatan di Kampoeng Tahu 5
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+              <img
+                src="https://asset.kompas.com/crops/ENCdFdptVRCK9GiXuY49RVlI2mw=/0x0:0x0/750x500/data/photo/2021/08/05/610bc2c968ad0.jpg"
+                alt="Sport"
+                class="w-full h-48 object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <div class="absolute bottom-0 left-0 right-0 p-4">
+                  <h4 class="text-xl font-bold text-white">
+                    Kegiatan di Kampoeng Tahu 6
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document
+        .getElementById("scrollButton")
+        .addEventListener("click", function () {
+          document
+            .getElementById("section2")
+            .scrollIntoView({ behavior: "smooth" });
+        });
+    </script>
+
+    <!-- BATAS CONTENT -->
+    <script src="node_modules/flowbite/dist/flowbite.min.js"></script>
+    <script src="main.js"></script>
+    <!-- <script>
+    import { Input, initTWE } from "tw-elements";
+        initTWE({ Input }, { allowReinits: true });
+        
+</script> -->
+
+    <script
+      type="text/javascript"
+      src="node_modules/tw-elements/dist/js/tw-elements.umd.min.js"
+    ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

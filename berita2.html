@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="skin/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+
+  <body>
+    <nav class="bg-white shadow-lg sticky top-0 z-40">
+      <div class="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-20">
+          <div class="flex-shrink-0 flex items-center">
+            <a href="#"
+              ><img
+                src="images/Logo/Logo.svg"
+                alt="logo"
+                class="size-16 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300" /></a
+            ><a
+              href="#"
+              class="text-xl font-bold text-gray-800 font-sans ml-4 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300 uppercase"
+              >Kampoeng Tahu Tinalan</a
+            >
+          </div>
+          <div
+            class="hidden md:flex space-x-4 items-center font-mono font-bold"
+          >
+            <a
+              href="index.html"
+              class="text-black transition ease-in delay-50 hover:-translate-y-1 hover:underline hover:decoration-sky-700 hover:scale-110 duration-300"
+              >Beranda</a
+            >
+            <a
+              href="index.html#section3"
+              target="_blank"
+              class="text-black transition ease-in delay-50 hover:-translate-y-1 hover:underline hover:decoration-sky-700 hover:scale-110 duration-300"
+              >Berita</a
+            >
+            <a
+              href="#"
+              class="text-black transition ease-in delay-50 hover:-translate-y-1 hover:underline hover:decoration-sky-700 hover:scale-110 duration-300"
+              >Produk</a
+            >
+            <a
+              href="resume.html"
+              target="_blank"
+              class="text-black transition ease-in delay-50 hover:-translate-y-1 hover:underline hover:decoration-sky-700 hover:scale-110 duration-300"
+              >Tentang saya</a
+            >
+            <button
+              type="button"
+              class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300"
+            >
+              Login
+            </button>
+            <button
+              type="button"
+              class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300"
+            >
+              Register
+            </button>
+          </div>
+          <div class="md:hidden flex items-center">
+            <button
+              id="menu-btn"
+              class="text-gray-700 hover:text-gray-900 focus:outline-none"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- BATAS NAVBAR -->
+
+    <!-- OFFCANVAS -->
+    <div
+      id="menu"
+      class="fixed inset-0 bg-gray-400 bg-opacity-75 transform -translate-x-full transition-transform duration-300 ease-in-out z-50 backdrop-blur-sm"
+    >
+      <div class="bg-white w-64 h-full relative">
+        <div class="flex justify-end p-4">
+          <button
+            id="close-btn"
+            class="text-gray-700 hover:text-gray-900 focus:outline-none"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div class="flex flex-col space-y-4 p-4">
+          <a href="#"
+            ><img
+              src="images/Logo/Logo.svg"
+              alt="logo"
+              class="size-16 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300" /></a
+          ><a
+            href="#"
+            class="text-xl font-bold text-gray-800 font-sans ml-4 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300"
+            >UMKM TES AREA</a
+          >
+          <a
+            href="#"
+            class="text-black transition ease-in delay-50 hover:-translate-y-1 hover:underline hover:decoration-sky-700 hover:scale-110 duration-300"
+            >Beranda</a
+          >
+          <a
+            href="#"
+            class="text-black transition ease-in delay-50 hover:-translate-y-1 hover:underline hover:decoration-sky-700 hover:scale-110 duration-300"
+            >Berita</a
+          >
+          <a
+            href="#"
+            class="text-black transition ease-in delay-50 hover:-translate-y-1 hover:underline hover:decoration-sky-700 hover:scale-110 duration-300"
+            >Produk</a
+          >
+          <a
+            href="#"
+            class="text-black transition ease-in delay-50 hover:-translate-y-1 hover:underline hover:decoration-sky-700 hover:scale-110 duration-300"
+            >Tentang Saya</a
+          >
+          <!-- <a href="#" class="text-gray-700 hover:text-gray-900">Home</a>
+            <a href="#" class="text-gray-700 hover:text-gray-900">About</a>
+            <a href="#" class="text-gray-700 hover:text-gray-900">Services</a>
+            <a href="#" class="text-gray-700 hover:text-gray-900">Contact</a> -->
+          <button
+            type="button"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300"
+          >
+            Login
+          </button>
+          <button
+            type="button"
+            class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300"
+          >
+            Register
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- BATAS OFFCANVAS -->
+    <!-- CONTENT -->
+    <!-- Main navigation container -->
+    <nav
+      class="relative flex w-full flex-wrap items-center justify-between bg-zinc-50 py-2 shadow-dark-mild dark:bg-neutral-700 lg:py-4"
+    >
+      <div class="flex w-full flex-wrap items-center justify-between px-3">
+        <nav class="w-full rounded-md" aria-label="breadcrumb">
+          <ol class="list-reset ms-2 flex">
+            <li>
+              <a
+                href="index.html"
+                class="text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80"
+                >Beranda</a
+              >
+            </li>
+            <li>
+              <span class="mx-2 text-black/60 dark:text-white/60">/</span>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80"
+                >Desa Tinalan</a
+              >
+            </li>
+            <li>
+              <span class="mx-2 text-black/60 dark:text-white/60">/</span>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80"
+                >Kota Kediri</a
+              >
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </nav>
+
+    <!-- Topic Nav -->
+    <nav
+      class="w-full py-4 border-t border-b bg-gray-100"
+      x-data="{ open: false }"
+    >
+      <div class="block sm:hidden">
+        <a
+          href="#"
+          class="md:hidden text-base font-bold uppercase text-center flex justify-center items-center"
+          @click="open = !open"
+        >
+          Topics
+          <i
+            :class="open ? 'fa-chevron-down': 'fa-chevron-up'"
+            class="fas ml-2"
+          ></i>
+        </a>
+      </div>
+    </nav>
+    <div class="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg mt-10">
+      <!-- Headline berita -->
+      <h1 class="text-3xl font-bold text-gray-800 mb-4">
+        Intip Kreasi Perajin di Kampung Tahu, Kini Oleh-oleh Kediri Banyak
+        Pilihan
+      </h1>
+
+      <!-- Tanggal dan waktu -->
+      <p class="text-sm text-gray-500 mb-6">Rabu, 03 Jul 2024 10:38 WIB</p>
+      <div class="grid gap-4">
+        <div>
+          <img
+            class="h-96 w-full max-w-full rounded-lg object-cover object-center md:h-[576px]"
+            src="images/album/kampoengTahuJatimNow.jpg"
+            alt=""
+          />
+        </div>
+        <div class="grid grid-cols-4 gap-4 mx-auto">
+          <div>
+            <img
+              src="images/album/kampoengTahuJatimNow2.jpg"
+              class="object-cover object-center h-20 max-w-full rounded-lg cursor-pointer"
+              alt="gallery-image"
+            />
+          </div>
+          <div>
+            <img
+              src="images/album/kampoengTahuJatimNow4.jpg"
+              class="object-cover object-center h-20 max-w-full rounded-lg cursor-pointer"
+              alt="gallery-image"
+            />
+          </div>
+          <div>
+            <img
+              src="images/album/kampoengTahuJatimNow5.jpg"
+              class="object-cover object-center h-20 max-w-full rounded-lg cursor-pointer"
+              alt="gallery-image"
+            />
+          </div>
+          <div>
+            <img
+              src="images/album/kampoengTahuJatimNow6.jpg"
+              class="object-cover object-center h-20 max-w-full rounded-lg cursor-pointer"
+              alt="gallery-image"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Isi berita -->
+      <div class="text-gray-700 leading-relaxed mb-6 text-justify">
+        <p class="mb-4">
+          jatimnow.com - Oleh-oleh Kediri kini bukan hanya tahu kuning atau tahu
+          takwa. Perajin di Kampung Tahu Tinalan terus berkreasi menyajikan
+          beragam olahan menarik untuk memberikan beragam pilihan masyarakat.
+        </p>
+        <p class="mb-4">
+          Salah satu perajin di Kampung Tahu Tinalan, Supingi kini memiliki
+          beragam olahan tahu yang nikmat. Bukan hanya stick atau keripik tahu,
+          dia juga menciptakan di antaranya tahu crispy, pilus tahu, coklat
+          tahu, cheese stick tahu serta terbaru gembus chip, terbuat dari ampas
+          tahu yang diolah menjadi camilan renyah.
+        </p>
+        <p class="mb-4">
+          “Yang paling rame cheese stick tahu, tahu bulat dan yang baru ini
+          gembus chip,” kata Supingi, Selasa (3/7/2024).
+        </p>
+        <p class="mb-4">
+          Melalui merk dagang Wijaya Kembar, Supingi selalu berinovasi. Setahun
+          setidaknya dia menciptakan satu olahan baru. Menurutnya, ini adalah
+          kunci untuk tetap eksis.
+        </p>
+        <p class="mb-4">
+          “Dari 2014 itu stick tahu, terus keripik tahu, 2017 cheese stick tahu,
+          2018 tahu walik, 2019 coklat tahu, sekarang gembus chip ini. Corona
+          itu berhenti total kita,” jelas Supingi.
+        </p>
+        <div>
+          <img
+            class="h-96 w-full max-w-full rounded-lg object-cover object-center md:h-[576px]"
+            src="images/album/kampoengTahuJatimNow3.jpg"
+            alt=""
+          />
+          <figcaption
+            class="mt-2 text-sm text-center text-black dark:text-black"
+          >
+            Proses pembuatan tahu di Kampung Tahu.
+          </figcaption>
+        </div>
+        <p class="mb-4 mt-6">
+          Saat ini, Supingi memang masih terkendala peralatan. Pemotong ampas
+          tahu sebagai bahan gembus chip juga masih dilakukan secara manual. Dia
+          belum menemukan alat yang pas.
+        </p>
+        <p class="mb-4">
+          Saat ini, Supingi memilih fokus pada olahan-olahan tahu tersebut.
+          Jadi, tahu yang dibuatnya adalah tahu putih. Sehari dia bisa mengolah
+          21 kilogram bahan kedelai atau lebih tergantung naik turunnya pasar.
+          Khusus tahu kuning, produksinya bergantung pesanan. “Tahu kuning kita
+          tergantung pesanan,” terangnya.
+        </p>
+        <p class="mb-4">
+          Untuk diketahui, Kampung Tahu ini berada di Kelurahan Tinalan Gg 4
+          Kota Kediri. Di sana berjajar puluhan perajin tahu yang asli warga
+          pribumi.
+        </p>
+        <p class="mb-4">
+          Jauh sebelum diresmikan oleh Pemerintah Kota Kediri sebagai Kampung
+          Tahu di tahun 2019, geliat Kampung Tahu di Tinalan Gang 4 ini lahir
+          sejak 1954.
+        </p>
+        <p class="mb-4">
+          Berbeda dengan pusat oleh-oleh di kawasan pecinan, yang menarik di
+          sini wisatawan bisa merasakan sensasi melihat langsung proses produksi
+          pembuatan tahu yang masih tradisional.
+        </p>
+      </div>
+
+      <!-- Footer berita -->
+      <div class="border-t pt-4">
+        <p class="text-sm text-gray-500">
+          Sumber:
+          <a
+            href="https://jatimnow.com/baca-69587-intip-kreasi-perajin-di-kampung-tahu-kini-oleholeh-kediri-banyak-pilihan"
+            class="text-blue-500 hover:underline"
+            target="_blank"
+            >Klik disini</a
+          >
+        </p>
+      </div>
+    </div>
+    <!-- <footer class="w-full border-t bg-white pb-12">
+            <div class="w-full container mx-auto flex flex-col items-center">
+                <div class="flex flex-col md:flex-row text-center md:text-left md:justify-between py-6">
+                    <a href="#" class="uppercase px-3">About Us</a>
+                    <a href="#" class="uppercase px-3">Privacy Policy</a>
+                    <a href="#" class="uppercase px-3">Terms & Conditions</a>
+                    <a href="#" class="uppercase px-3">Contact Us</a>
+                </div>
+                <div class="uppercase pb-6">&copy; myblog.com</div>
+            </div>
+        </footer> -->
+
+    <!-- BATAS CONTENT -->
+    <style></style>
+    <script src="node_modules/flowbite/dist/flowbite.min.js"></script>
+    <script src="main.js"></script>
+    <script>
+      import { Input, initTWE } from "tw-elements";
+      initTWE({ Input }, { allowReinits: true });
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

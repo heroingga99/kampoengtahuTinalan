@@ -1,0 +1,311 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="skin/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <nav class="bg-white shadow-lg sticky top-0 z-40">
+        <div class="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html"><img src="images/Logo/Logo.svg" alt="logo"
+                            class="size-16 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300"></a><a
+                        href="index.html"
+                        class="text-xl font-bold text-gray-800 font-sans ml-4 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300 uppercase">Kampoeng
+                        Tahu Tinalan</a>
+                </div>
+                <div class="hidden md:flex space-x-4 items-center font-mono font-bold">
+                    <a href="index.html"
+                        class="text-black transition ease-in delay-50 hover:-translate-y-1 hover:underline hover:decoration-sky-700 hover:scale-110 duration-300">Beranda</a>
+                    <a href="index.html#section3"
+                        class="text-black transition ease-in delay-50 hover:-translate-y-1 hover:underline hover:decoration-sky-700 hover:scale-110 duration-300">Berita</a>
+                    <a href="#"
+                        class="text-black transition ease-in delay-50 hover:-translate-y-1 hover:underline hover:decoration-sky-700 hover:scale-110 duration-300">Produk</a>
+                    <a href="resume.html" target="_blank"
+                        class="text-black transition ease-in delay-50 hover:-translate-y-1 hover:underline hover:decoration-sky-700 hover:scale-110 duration-300">Tentang
+                        saya</a>
+                    <button type="button"
+                        class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300">Login</button>
+                    <button type="button"
+                        class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300">Register</button>
+
+
+
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-700 hover:text-gray-900 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<!-- Batas NAV -->
+
+<!-- OFFCANVAS -->
+<div id="menu"
+    class="fixed inset-0 bg-gray-400 bg-opacity-75 transform -translate-x-full transition-transform duration-300 ease-in-out z-50 backdrop-blur-sm">
+    <div class="bg-white w-64 h-full relative">
+        <div class="flex justify-end p-4">
+            <button id="close-btn" class="text-gray-700 hover:text-gray-900 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <div class="flex flex-col space-y-4 p-4">
+            <a href="#"><img src="images/Logo/Logo.svg" alt="logo"
+                    class="size-16 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300"></a><a
+                href="#"
+                class="text-xl font-bold text-gray-800 font-sans ml-4 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300  ">UMKM
+                TES AREA</a>
+            <a href="#"
+                class="text-black transition ease-in delay-50 hover:-translate-y-1 hover:underline hover:decoration-sky-700 hover:scale-110 duration-300">Beranda</a>
+            <a href="berita.html" target="_blank"
+                class="text-black transition ease-in delay-50 hover:-translate-y-1 hover:underline hover:decoration-sky-700 hover:scale-110 duration-300">Berita</a>
+            <a href="#"
+                class="text-black transition ease-in delay-50 hover:-translate-y-1 hover:underline hover:decoration-sky-700 hover:scale-110 duration-300">Produk</a>
+            <a href="#"
+                class="text-black transition ease-in delay-50 hover:-translate-y-1 hover:underline hover:decoration-sky-700 hover:scale-110 duration-300">Tentang
+                Saya</a>
+            <!-- <a href="#" class="text-gray-700 hover:text-gray-900">Home</a>
+            <a href="#" class="text-gray-700 hover:text-gray-900">About</a>
+            <a href="#" class="text-gray-700 hover:text-gray-900">Services</a>
+            <a href="#" class="text-gray-700 hover:text-gray-900">Contact</a> -->
+            <button type="button"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300">Login</button>
+            <button type="button"
+                class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300">Register</button>
+        </div>
+    </div>
+</div>
+<!-- BATAS OFFCANVAS -->
+
+<section class="">
+    <div class="container max-w-xl p-6 mx-auto space-y-12 lg:px-8 lg:max-w-7xl">
+        <div>
+            <h2 class="text-3xl font-bold text-center sm:text-5xl">Kampoeng Tahu</h2>
+            <p class="max-w-3xl mx-auto mt-4 text-xl text-center ">Desa Tinalan Kecamatan Pesantren, Kota Kediri, Provinsi Jawa Timur.</p>
+        </div>
+        <div class="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
+            <div>
+                <div class="mt-4 space-y-12">
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center w-auto h-auto rounded-md">
+                                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                                    height="24" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 6.03v13m0-13c-2.819-.831-4.715-1.076-8.029-1.023A.99.99 0 0 0 3 6v11c0 .563.466 1.014 1.03 1.007 3.122-.043 5.018.212 7.97 1.023m0-13c2.819-.831 4.715-1.076 8.029-1.023A.99.99 0 0 1 21 6v11c0 .563-.466 1.014-1.03 1.007-3.122-.043-5.018.212-7.97 1.023" />
+                                </svg>
+
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-xl font-bold leadi ">Sejarah Kampoeng Tahu</h4>
+                            <p class="mt-2 text-justify" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom" data-aos-duration="1000">Kampung Tahu Tinalan di Kota Kediri, Jawa Timur, merupakan sebuah kawasan yang dikenal sebagai sentra produksi tahu
+                            tradisional. Terletak di Kelurahan Tinalan, Kecamatan Pesantren, kampung ini sudah lama dikenal sebagai pusat industri
+                            rumahan pembuatan tahu. Aktivitas pembuatan tahu di sini dimulai sejak puluhan tahun yang lalu dan telah menjadi bagian
+                            penting dari kehidupan masyarakat setempat.<p class="text-justify"data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom" data-aos-duration="1000"><span class="font-bold">Produksi Tahu:</span> Kampung ini terkenal dengan proses produksi tahu yang masih dilakukan secara tradisional, menggunakan
+                            bahan-bahan alami tanpa bahan pengawet. Proses pembuatan tahu di Kampung Tinalan dimulai dari penggilingan kedelai,
+                            perebusan, hingga pencetakan dan pemotongan tahu yang dilakukan secara manual oleh para pengrajin. Setiap rumah di
+                            kampung ini biasanya memiliki usaha pembuatan tahu sendiri, dengan variasi rasa dan tekstur yang khas.</p>
+                            <p class="text-justify" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom" data-aos-duration="1000"><span class="font-bold">Wisata Edukasi:</span> Selain menjadi pusat produksi, Kampung Tahu Tinalan juga dikembangkan sebagai destinasi wisata edukasi.
+                            Pengunjung dapat menyaksikan langsung proses pembuatan tahu dan bahkan mencoba membuat tahu sendiri di beberapa tempat
+                            yang menyediakan paket wisata. Kampung ini juga menawarkan pengalaman mencicipi tahu yang baru saja diproduksi, yang
+                            tentu saja memiliki cita rasa yang berbeda dengan tahu yang dijual di pasaran.
+</p>
+                            <p class="text-justify" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom" data-aos-duration="1000"><span class="font-bold">Budaya dan Tradisi:</span> Kehidupan di Kampung Tahu Tinalan tidak hanya berputar pada industri tahu, tetapi juga pada
+                            nilai-nilai budaya dan tradisi masyarakat setempat. Kerja sama antar warga dalam mempertahankan kualitas produksi dan
+                            menjaga warisan tradisional menjadi salah satu ciri khas kampung ini. Beberapa event atau festival terkait tahu kadang
+                            diadakan untuk menarik wisatawan sekaligus melestarikan budaya lokal.
+
+</p>
+                            <p class="text-justify" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom" data-aos-duration="1000"><span class="font-bold">Pengembangan Ekonomi:</span> Kampung Tahu Tinalan juga menjadi contoh sukses dari pengembangan ekonomi berbasis komunitas.
+                            Dengan banyaknya wisatawan yang datang, usaha kecil menengah (UKM) di bidang kuliner dan kerajinan tangan mulai tumbuh,
+                            sehingga meningkatkan pendapatan masyarakat setempat. Selain itu, pemerintah daerah juga turut mendukung dengan
+                            membangun infrastruktur dan mempromosikan kampung ini sebagai destinasi wisata unggulan.
+
+
+</p>
+                            <p class="text-justify" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom" data-aos-duration="1000"><span class="font-bold">Akses dan Lokasi:</span> Kampung Tahu Tinalan dapat diakses dengan mudah dari pusat Kota Kediri. Lokasinya yang strategis
+                            membuatnya menjadi destinasi yang cocok untuk dikunjungi oleh wisatawan lokal maupun luar kota.
+</p>
+                            <p class="text-justify" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom" data-aos-duration="1000">Kampung Tahu Tinalan tidak hanya menjadi pusat industri tahu, tetapi juga sebagai simbol keberlanjutan tradisi dan
+                            pengembangan ekonomi masyarakat lokal. Kampung ini merupakan destinasi yang menarik untuk dikunjungi bagi siapa saja
+                            yang ingin mengenal lebih dekat industri tahu tradisional dan merasakan langsung kearifan lokal yang
+                            terjaga dengan baik.
+</p>
+                           
+
+</p>
+                        </div>
+                    </div>
+                    <!-- <div class="flex">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center w-12 h-12 rounded-md">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-bookmark-plus">
+                                    <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path>
+                                    <line x1="12" x2="12" y1="7" y2="13"></line>
+                                    <line x1="15" x2="9" y1="10" y2="10"></line>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-medium leadi ">Interactive Learning Resources</h4>
+                            <p class="mt-2 ">Access an extensive library of interactive resources that make your
+                                learning journey engaging and interactive.</p>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center w-12 h-12 rounded-md">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-video">
+                                    <path d="m22 8-6 4 6 4V8Z"></path>
+                                    <rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-medium leadi ">Enhanced Video Streaming</h4>
+                            <p class="mt-2 ">Experience seamless video integration with enhanced streaming capabilities,
+                                providing a better and more uninterrupted learning experience.</p>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center w-12 h-12 rounded-md">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-file-question">
+                                    <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z">
+                                    </path>
+                                    <path d="M10 10.3c.2-.4.5-.8.9-1a2.1 2.1 0 0 1 2.6.4c.3.4.5.8.5 1.3 0 1.3-2 2-2 2">
+                                    </path>
+                                    <path d="M12 17h.01"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-medium leadi ">Advanced Quiz Generation </h4>
+                            <p class="mt-2 ">Take your knowledge testing to the next level with advanced quiz
+                                generation, providing more customization options for your quizzes.</p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div aria-hidden="true" class="mt-10 lg:mt-0">
+                <img width="600" height="600"
+                    src="https://prodamas.kedirikota.go.id/articleProd/sampul/sampul-1655979581.jpg"
+                    class="mx-auto rounded-lg shadow-lg dark-bg-gray-500" style="color:transparent" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
+                    <img width="600" height="600"
+                        src="https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/radarkediri/2019/08/wajah-tinalan-setelah-menjadi-wisata-edukasi-kampung-tahu_m_152592.jpg"
+                        class="mx-auto rounded-lg shadow-lg dark-bg-gray-500 mt-6" style="color:transparent" data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom" data-aos-duration="1000">
+                <img width="600" height="600"
+                    src="https://asset.kompas.com/crops/UM8c2xqg2Os_EFnMjJPFPrS7EyY=/0x0:0x0/750x500/data/photo/2021/08/05/610bc2888ac9c.jpg"
+                    class="mx-auto rounded-lg shadow-lg dark-bg-gray-500 mt-6" style="color:transparent" data-aos="fade-up"
+     data-aos-anchor-placement="center-bottom" data-aos-duration="1000">
+    </div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+    document.getElementById('scrollButton').addEventListener('click', function () {
+        document.getElementById('section2').scrollIntoView({ behavior: 'smooth' });
+    });
+</script>
+
+<style>
+    .wave-divider {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+    }
+
+    .wave-divider svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 60px;
+    }
+
+    @media (min-width: 768px) {
+        .wave-divider svg {
+            height: 150px;
+        }
+    }
+
+    .wave-divider2 {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+    }
+
+    .wave-divider2 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 60px;
+    }
+
+    @media (min-width: 768px) {
+        .wave-divider svg {
+            height: 150px;
+        }
+    }
+</style>
+
+
+
+
+<!-- BATAS CONTENT -->
+<script src="node_modules/flowbite/dist/flowbite.min.js"></script>
+<script src="main.js"></script>
+<!-- <script>
+    import { Input, initTWE } from "tw-elements";
+        initTWE({ Input }, { allowReinits: true });
+        
+</script> -->
+
+<script type="text/javascript" src="node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+</body>
+
+</html>
