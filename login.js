@@ -1,3 +1,30 @@
+document
+  .getElementById("loginForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    // Ambil nilai input dari form login
+    const loginEmail = document.getElementById("loginEmail").value;
+    const loginPassword = document.getElementById("loginPassword").value;
+
+    // Ambil semua akun yang tersimpan dari localStorage
+    const accounts = JSON.parse(localStorage.getItem("accounts")) || [];
+
+    // Cek apakah email dan password cocok dengan salah satu akun
+    const accountFound = accounts.find(
+      (account) =>
+        account.email === loginEmail && account.password === loginPassword
+    );
+
+    if (accountFound) {
+      alert(`Login berhasil! Selamat datang, ${accountFound.name}.`);
+      // Redirect ke halaman lain atau aksi lainnya
+      window.location.href = "resume.html";
+    } else {
+      alert("Email atau password salah!");
+    }
+  });
+
 const menuBtn = document.getElementById("menu-btn");
 const menu = document.getElementById("menu");
 const closeBtn = document.getElementById("close-btn");
@@ -26,30 +53,3 @@ document.getElementById("scrollButton2").addEventListener("click", function () {
 document.getElementById("scrollButton3").addEventListener("click", function () {
   document.getElementById("section3").scrollIntoView({ behavior: "smooth" });
 });
-
-/* Checking data */
-
-// function syarat() {
-//   const predefinedUsername = "admin@yahoo.com";
-//   const predefinedPassword = "123";
-
-//   const username = document.getElementById("login-username").value;
-//   // const checkbox = document.getElementById("checkbox");
-//   const pass = document.getElementById("login-pass").value;
-
-//   if (!username || !pass) {
-//     alert("Username atau password tidak boleh kosong");
-//     window.location.reload();
-//     return false;
-//   }
-
-//   if (username !== predefinedUsername || pass !== predefinedPassword) {
-//     alert("Username atau password salah.");
-//     window.location.reload();
-//     return false; // Mencegah form dikirim
-//   }
-
-//   alert("Login berhasil!");
-//   window.location.href = "index.html"; // Ganti dengan halaman tujuan
-//   return false;
-// }
