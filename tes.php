@@ -5,7 +5,7 @@ $username = $_POST["email"];
 $password = $_POST["password"];
 
 // Data yang ingin ditulis ke file
-$data = $username . " " . $password;
+$data = "$username . " " . $password";
 
 // Buka file dalam mode "a" (append) untuk menambah data di akhir file.
 // Jika file tidak ada, maka file akan dibuat.
